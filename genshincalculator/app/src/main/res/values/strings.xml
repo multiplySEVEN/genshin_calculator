@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">原神伤害计算器</string>
+    <string name="label_character">选择角色</string>
+    <string name="label_weapon">选择武器</string>
+    <string name="btn_calculate">开始计算</string>
+</resources>

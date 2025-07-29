@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.genshin_calculator">
+
+    <!-- 应用最低 SDK 和目标 SDK 要通过 build.gradle 指定，此处无需写 -->
+
+    <!-- 可选权限声明（根据需要开启） -->
+    <!-- 如果你计划读取外部存储，可以考虑以下权限（注意适配 Android 11+） -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="原神伤害计算器"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Genshincalculator">
+
+        <!-- 主界面入口 -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 角色输入界面 -->
+        <activity android:name=".CharacterActivity" />
+
+        <!-- 武器输入界面 -->
+        <activity android:name=".WeaponActivity" />
+
+        <!-- 圣遗物选择界面 -->
+        <activity android:name=".ArtifactActivity" />
+
+        <!-- 怪物信息界面 -->
+        <activity android:name=".EnemyActivity" />
+
+        <!-- 输出结果界面 -->
+        <activity android:name=".ResultActivity" />
+
+        <!-- 扩展：元素反应设置界面（如果已创建） -->
+        <activity android:name=".ReactionActivity" />
+
+        <!-- 其他界面可以在此继续添加，例如队伍增益设置、特殊角色参数输入等 -->
+        <!-- <activity android:name=".BuffActivity" /> -->
+
+    </application>
+
+</manifest>

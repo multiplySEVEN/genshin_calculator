@@ -1,0 +1,16 @@
+[
+  {
+    "setName": "魔女套",
+    "slot": "Flower",
+    "mainStat": {
+      "type": "HP",
+      "value": 4780
+    },
+    "subStats": [
+      { "type": "CritRate", "value": 3.1 },
+      { "type": "CritDMG", "value": 6.2 },
+      { "type": "ATK%", "value": 5.8 },
+      { "type": "ElementalMastery", "value": 21 }
+    ]
+  }
+]

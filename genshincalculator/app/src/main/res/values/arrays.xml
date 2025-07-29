@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 可选：角色类型、元素类型等静态数组 -->
+    <string-array name="elements">
+        <item>物理</item>
+        <item>火</item>
+        <item>水</item>
+        <item>冰</item>
+        <item>雷</item>
+    </string-array>
+</resources>

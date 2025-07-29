@@ -1,0 +1,20 @@
+[
+  {
+    "id": "10000001",
+    "name": "胡桃",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "baseAttack": 106,
+    "baseHP": 1210,
+    "baseDefense": 68,
+    "ascensionStat": {
+      "type": "CritDMG",
+      "valuePerLevel": [0, 0.096, 0.192, 0.288, 0.384, 0.480]
+    },
+    "talents": {
+      "normalAttack": [0.468, 0.505, 0.542],
+      "skill": [3.84],
+      "burst": [6.16]
+    }
+  }
+]

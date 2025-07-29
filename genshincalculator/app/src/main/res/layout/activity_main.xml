@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主界面布局：选择角色 & 武器，并进入下一页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="选择角色" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/spinner_character"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="选择武器" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_weapon"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="开始计算" />
+</LinearLayout>

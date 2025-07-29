@@ -1,0 +1,17 @@
+[
+  {
+    "name": "护摩之杖",
+    "rarity": 5,
+    "type": "Polearm",
+    "baseAttack": 46,
+    "subStat": {
+      "type": "CritDMG",
+      "value": 14.4
+    },
+    "passive": {
+      "description": "生命值提高20%。基于最大生命值的攻击力提升。",
+      "effectType": "HPtoATK",
+      "hpToAtkRate": 0.016
+    }
+  }
+]

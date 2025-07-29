@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RecyclerView 子项布局，用于显示一条伤害计算结果 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="8dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="非暴击: "/>
+
+    <TextView
+        android:id="@+id/tv_crit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暴击伤害: "/>
+
+    <TextView
+        android:id="@+id/tv_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="期望: "/>
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="乘区详情" android:textSize="12sp"/>
+</LinearLayout>
