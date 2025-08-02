@@ -2,7 +2,7 @@
   {
     "name": "护摩之杖",
     "rarity": 5,
-    "type": "Polearm",
+    "weaponType": "长柄武器",
     "baseAttack": 46,
     "subStat": {
       "type": "CritDMG",
@@ -14,4 +14,5 @@
       "hpToAtkRate": 0.016
     }
   }
+
 ]

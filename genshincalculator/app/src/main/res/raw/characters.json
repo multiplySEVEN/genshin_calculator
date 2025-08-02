@@ -2,8 +2,8 @@
   {
     "id": "10000001",
     "name": "胡桃",
-    "element": "Pyro",
-    "weaponType": "Polearm",
+    "element": "火",
+    "weaponType": "长柄武器",
     "baseAttack": 106,
     "baseHP": 1210,
     "baseDefense": 68,
@@ -17,4 +17,5 @@
       "burst": [6.16]
     }
   }
+
 ]
