@@ -4,6 +4,7 @@ package com.example.genshin_calculator.models
 data class Character(
     val name: String,               // 角色名称
     val baseAttack: Int,           // 角色基础攻击力
+    val weaponType: String,        // 武器类型
     val element: String,           // 元素类型，例如：火、水、雷等
     val level: Int,                // 当前等级
     val critRate: Double,          // 暴击率（0.05~1.0）

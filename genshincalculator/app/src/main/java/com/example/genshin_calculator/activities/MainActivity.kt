@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         btnNext = findViewById(R.id.btn_next)
 
         // 加载本地 JSON 数据
-        characters = DataLoader.loadJsonData(this, "characters.json")
-        weapons = DataLoader.loadJsonData(this, "weapons.json")
+        characters = DataLoader.loadJsonFromRaw(this, R.raw.characters)
+        weapons = DataLoader.loadJsonFromRaw(this, R.raw.weapons)
 
         // 初始化角色下拉菜单
         val charAdapter = CharacterAdapter(this, characters)
@@ -45,12 +45,28 @@ class MainActivity : AppCompatActivity() {
                 p: AdapterView<*>, view: android.view.View, pos: Int, id: Long
             ) {
                 selectedChar = characters[pos]
-                // 筛选武器列表与角色武器类型匹配
-                val filtered = weapons.filter { it.subStatType.contains(selectedChar!!.element) || true }
-                val wAdapter = WeaponAdapter(this@MainActivity, filtered)
+
+                // 安全筛选武器列表
+                val filteredWeapons = selectedChar?.let { char ->
+                    weapons.filter { weapon ->
+                        // 检查武器类型是否匹配角色可使用的武器类型
+                        weapon.weaponType == char.weaponType
+                    }
+                } ?: emptyList() // 如果角色为空，返回空列表
+
+                val wAdapter = WeaponAdapter(this@MainActivity, filteredWeapons)
                 spinnerWeap.adapter = wAdapter
+
+                // 可选：默认选中第一个武器
+                if (filteredWeapons.isNotEmpty()) {
+                    spinnerWeap.setSelection(0)
+                }
             }
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // 当没有选中任何角色时，清空武器列表
+                spinnerWeap.adapter = WeaponAdapter(this@MainActivity, emptyList())
+            }
         }
 
         // 点击按钮跳转

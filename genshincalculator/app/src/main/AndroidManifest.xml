@@ -20,7 +20,7 @@
         android:theme="@style/Theme.Genshincalculator">
 
         <!-- 主界面入口 -->
-        <activity android:name=".MainActivity"
+        <activity android:name="com.example.genshin_calculator.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,22 +29,22 @@
         </activity>
 
         <!-- 角色输入界面 -->
-        <activity android:name=".CharacterActivity" />
+        <!-- activity android:name=".CharacterActivity" / -->
 
         <!-- 武器输入界面 -->
-        <activity android:name=".WeaponActivity" />
+        <!-- activity android:name=".WeaponActivity" /-->
 
         <!-- 圣遗物选择界面 -->
-        <activity android:name=".ArtifactActivity" />
+        <activity android:name="com.example.genshin_calculator.activities.ArtifactActivity" />
 
         <!-- 怪物信息界面 -->
-        <activity android:name=".EnemyActivity" />
+        <!-- android:name=".EnemyActivity" /-->
 
         <!-- 输出结果界面 -->
-        <activity android:name=".ResultActivity" />
+        <activity android:name="com.example.genshin_calculator.activities.ResultActivity" />
 
         <!-- 扩展：元素反应设置界面（如果已创建） -->
-        <activity android:name=".ReactionActivity" />
+        <!-- activity android:name=".ReactionActivity" /-->
 
         <!-- 其他界面可以在此继续添加，例如队伍增益设置、特殊角色参数输入等 -->
         <!-- <activity android:name=".BuffActivity" /> -->
