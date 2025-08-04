@@ -19,7 +19,7 @@ data class DamageResult(
     val critRate: Double,
     val critDamage: Double,
     val averageDamage: Double,    // 平均期望伤害
-    val bonus: Double,
+    val damageBonus: Double,
     val finalDamage: Double,
     val reactionMultiplier: Double
 )

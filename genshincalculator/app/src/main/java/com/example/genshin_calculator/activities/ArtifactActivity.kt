@@ -35,7 +35,7 @@ class ArtifactActivity : AppCompatActivity() {
         val adapter = ArtifactAdapter(artifactList) { selectedArtifact ->
             val resultIntent = Intent().apply {
                 // 这里可以传整个对象，需Artifact实现Serializable或Parcelable
-                putExtra("selectedArtifactName", selectedArtifact.name)
+                putExtra("selectedArtifactName", selectedArtifact.setName)
             }
             setResult(Activity.RESULT_OK, resultIntent)
             finish()

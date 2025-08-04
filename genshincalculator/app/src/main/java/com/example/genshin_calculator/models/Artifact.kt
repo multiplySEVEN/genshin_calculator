@@ -1,12 +1,26 @@
 package com.example.genshin_calculator.models
 
-// 圣遗物数据类：五件部位合并为一个对象
+// 增强版圣遗物数据类
 data class Artifact(
-    val name: String,
-    val mainStat: String,    // 主词条描述
-    val attackPercent: Double,     // 攻击力百分比加成
-    val flatAttack: Int,           // 固定攻击力加成
-    val critRate: Double,          // 暴击率加成
-    val critDamage: Double,        // 暴击伤害加成
-    val elementalBonus: Double     // 元素伤加成
-)
+    val setName: String,          // 套装名称
+    val slot: SlotType,           // 部位类型
+    val mainStat: MainStat,       // 主词条
+    val subStats: List<SubStat>,  // 副词条(最多4条)
+    val level: Int = 20           // 强化等级(默认20)
+) {
+    // 部位类型枚举
+    enum class SlotType { FLOWER, PLUME, SANDS, GOBLET, CIRCLET }
+
+    // 主词条
+    data class MainStat(
+        val type: StatType,       // 属性类型
+        val values: List<Double>  // 属性数值(每级)
+    )
+
+    // 副词条
+    data class SubStat(
+        val type: StatType,       // 属性类型
+        val value: Double,       // 属性数值
+        val rolls: Int = 1       // 强化次数(默认1)
+    )
+}

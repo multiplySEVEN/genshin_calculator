@@ -1,13 +1,26 @@
 package com.example.genshin_calculator.models
 
-// 武器数据类，包含名称、攻击力、副词条（例如暴击率）等
+// 增强版武器数据类
 data class Weapon(
-    val name: String,               // 武器名称
-    val attack: Double,             // 武器提供的攻击力
-    val weaponType: String,         // 武器类型
-    val subStatType: String,        // 副词条类型：暴击率、暴击伤害等
-    val subStatValue: Double        // 副词条数值，例如0.20代表+20%
+    val name: String,             // 武器名称
+    val rarity: Int,              // 星级(3-5)
+    val weaponType: String,       // 武器类型
+    val baseATK: List<Double>,    // 基础攻击力(每级)
+    val subStat: SubStat,         // 副属性
+    val passive: Passive,         // 被动效果
+    val level: Int = 90,          // 武器等级(默认90)
+    val refinement: Int = 1       // 精炼等级(1-5)
+) {
+    // 副属性
+    data class SubStat(
+        val type: StatType,       // 属性类型
+        val values: List<Double>  // 属性数值(每级)
+    )
 
-    ,val critRate: Double,
-    val critDamage: Double
-)
+    // 被动效果
+    data class Passive(
+        val name: String,         // 效果名称
+        val description: String,  // 效果描述
+        val refinements: List<Map<String, Double>> // 精炼等级效果(1-5)
+    )
+}

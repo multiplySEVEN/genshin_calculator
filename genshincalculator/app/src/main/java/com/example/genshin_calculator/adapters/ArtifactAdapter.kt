@@ -33,7 +33,7 @@ class ArtifactAdapter(
 
     override fun onBindViewHolder(holder: ArtifactViewHolder, position: Int) {
         val artifact = artifacts[position]
-        holder.textArtifactName.text = artifact.name
+        holder.textArtifactName.text = artifact.setName
         holder.textMainStat.text = "主词条: ${artifact.mainStat}"
 
         // 点击事件

@@ -57,7 +57,7 @@ class MainViewModel : ViewModel() {
             Calculator.calculateDamage(
                 character = char,
                 weapon = weap,
-                artifact = art,
+                artifacts = listOf(art),
                 buffs = emptyList(),          // 后续可改为动态输入
                 teammateBuffs = emptyList(),
                 enemy = Enemy(level = 90, resistance = 0.1),

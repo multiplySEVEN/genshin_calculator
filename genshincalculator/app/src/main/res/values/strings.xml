@@ -4,4 +4,13 @@
     <string name="label_character">选择角色</string>
     <string name="label_weapon">选择武器</string>
     <string name="btn_calculate">开始计算</string>
+    <string name="label_char_level">角色等级</string>
+    <string name="label_weap_level">武器等级</string>
+    <string name="label_constellation">命之座等级</string>
+    <string name="label_refinement">精炼等级</string>
+    <string name="label_talents">天赋等级</string>
+    <string name="label_attack_type">攻击类型</string>
+    <string name="label_reaction">元素反应</string>
+    <string name="label_artifacts">圣遗物设置</string>
+    <string name="label_teammates">队友增益</string>
 </resources>

@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 可选：角色类型、元素类型等静态数组 -->
+    <!-- 元素类型 -->
     <string-array name="elements">
         <item>物理</item>
         <item>火</item>
         <item>水</item>
         <item>冰</item>
         <item>雷</item>
+        <item>风</item>
+        <item>岩</item>
+        <item>草</item>
+    </string-array>
+
+    <!-- 命之座等级 -->
+    <string-array name="constellation_levels">
+        <item>0命</item>
+        <item>1命</item>
+        <item>2命</item>
+        <item>3命</item>
+        <item>4命</item>
+        <item>5命</item>
+        <item>6命</item>
+    </string-array>
+
+    <!-- 精炼等级 -->
+    <string-array name="refinement_levels">
+        <item>精1</item>
+        <item>精2</item>
+        <item>精3</item>
+        <item>精4</item>
+        <item>精5</item>
+    </string-array>
+
+    <!-- 天赋等级 -->
+    <string-array name="talent_levels">
+        <item>1级</item>
+        <item>2级</item>
+        <item>3级</item>
+        <item>4级</item>
+        <item>5级</item>
+        <item>6级</item>
+        <item>7级</item>
+        <item>8级</item>
+        <item>9级</item>
+        <item>10级</item>
+        <item>11级</item>
+        <item>12级</item>
+        <item>13级</item>
+    </string-array>
+
+    <!-- 攻击类型 -->
+    <string-array name="attack_types">
+        <item>普攻</item>
+        <item>重击</item>
+        <item>下落攻击</item>
+        <item>元素战技</item>
+        <item>元素爆发</item>
+    </string-array>
+
+    <!-- 元素反应类型 -->
+    <string-array name="reaction_types">
+        <item>无反应</item>
+        <item>蒸发(火水)</item>
+        <item>蒸发(水火)</item>
+        <item>融化(火冰)</item>
+        <item>融化(冰火)</item>
+        <item>超载</item>
+        <item>超导</item>
+        <item>感电</item>
+        <item>绽放</item>
+        <item>超绽放</item>
+        <item>烈绽放</item>
     </string-array>
 </resources>

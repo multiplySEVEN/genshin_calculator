@@ -9,7 +9,7 @@ import com.example.genshin_calculator.R
 import com.example.genshin_calculator.models.DamageResult
 
 /**
- * RecyclerView 适配器，用于展示伤害计算结果
+ * 增强版伤害结果适配器
  */
 class DamageResultAdapter(private val list: List<DamageResult>) :
     RecyclerView.Adapter<DamageResultAdapter.VH>() {
@@ -22,7 +22,8 @@ class DamageResultAdapter(private val list: List<DamageResult>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.item_damage_result, parent, false)
+        val v = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_damage_result, parent, false)
         return VH(v)
     }
 
@@ -30,9 +31,9 @@ class DamageResultAdapter(private val list: List<DamageResult>) :
 
     override fun onBindViewHolder(holder: VH, position: Int) {
         val r = list[position]
-        holder.tvNorm.text = "非暴击: %.1f".format(r.baseAttack)
-        holder.tvCrit.text = "暴击伤害: %.1f".format(r.critDamage)
-        holder.tvAvg.text = "期望: %.1f".format(r.averageDamage)
-        //holder.tvDetail.text = "乘区详情: ${r.detailBreakdown}"
+        holder.tvNorm.text = "基础攻击: %.1f".format(r.baseAttack)
+        holder.tvCrit.text = "暴击伤害: %.1f".format(r.finalDamage * (1 + r.critDamage))
+        holder.tvAvg.text = "期望伤害: %.1f".format(r.averageDamage)
+        holder.tvDetail.text = "暴击率: ${(r.critRate * 100).toInt()}%, 暴伤: ${(r.critDamage * 100).toInt()}%"
     }
 }

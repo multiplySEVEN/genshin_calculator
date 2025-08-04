@@ -4,18 +4,31 @@
     "name": "胡桃",
     "element": "火",
     "weaponType": "长柄武器",
-    "baseAttack": 106,
-    "baseHP": 1210,
-    "baseDefense": 68,
-    "ascensionStat": {
-      "type": "CritDMG",
-      "valuePerLevel": [0, 0.096, 0.192, 0.288, 0.384, 0.480]
-    },
+    "baseHP": [1210, 3425, 4428, 5308, 5924, 6540, 7155, 7771, 8387, 9002, 9618, 10234, 10849, 11465],
+    "baseATK": [106, 300, 388, 465, 519, 573, 627, 681, 735, 789, 843, 897, 951, 1005],
+    "baseDEF": [68, 193, 250, 299, 334, 369, 404, 439, 474, 509, 544, 579, 614, 649],
+    "ascensionStat": "CRIT_DMG",
+    "ascensionValues": [0, 0.096, 0.192, 0.288, 0.384, 0.480],
+    "constellations": [
+      {
+        "level": 1,
+        "effect": "彼岸蝶舞",
+        "modifiers": {
+          "ELEMENTAL_SKILL_CD_REDUCTION": -0.2
+        }
+      },
+      {
+        "level": 2,
+        "effect": "血之灶火",
+        "modifiers": {
+          "BLOOM_DMG_BONUS": 0.1
+        }
+      }
+    ],
     "talents": {
-      "normalAttack": [0.468, 0.505, 0.542],
-      "skill": [3.84],
-      "burst": [6.16]
+      "normalAttack": [0.468, 0.505, 0.542, 0.586, 0.623, 0.665, 0.717, 0.769, 0.821, 0.873, 0.925],
+      "elementalSkill": [3.84, 4.08, 4.32, 4.56, 4.80, 5.04, 5.28, 5.52, 5.76, 6.00],
+      "elementalBurst": [6.16, 6.55, 6.94, 7.33, 7.72, 8.11, 8.50, 8.89, 9.28, 9.67]
     }
   }
-
 ]
